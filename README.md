@@ -1,5 +1,5 @@
 ## Fork Notice
-This code is forked from [https://github.com/adtac/relevant-xkcd], with the goal of generally tidying up the project.
+This code is forked from https://github.com/adtac/relevant-xkcd, with the goal of generally tidying up the project.
 
 ## relevant-xkcd
 
