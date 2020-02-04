@@ -11,4 +11,4 @@ FROM alpine:3.6
 COPY --from=build /go/src/relevant-xkcd/relevant-xkcd /relevant-xkcd/
 
 WORKDIR /relevant-xkcd
-ENTRYPOINT /relevant-xkcd/relevant-xkcd
+ENTRYPOINT sh

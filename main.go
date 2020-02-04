@@ -1,27 +1,29 @@
 package main
 
 import (
-    "fmt"
-    "time"
-    "net/http"
+	"fmt"
+	"net/http"
+	"time"
 )
 
 var comics []XKCDComic
 
 func main() {
-    loadComics()
+	loadComics()
 
-    go func() {
-        for {
-            crawl()
-            loadComics()
-            time.Sleep(crawlInterval)
-        }
-    }()
-    fmt.Printf("Started background crawl\n");
+	go func() {
+		for {
+			fmt.Printf("Started crawl\n")
+			crawl()
+			fmt.Printf("Crawl finished\n")
+			loadComics()
+			time.Sleep(crawlInterval)
+		}
+	}()
+	fmt.Printf("Started background crawl\n")
 
-    http.HandleFunc("/", IndexHandler)
-    http.HandleFunc("/search", SearchHandler)
+	http.HandleFunc("/", IndexHandler)
+	http.HandleFunc("/search", SearchHandler)
 
-    http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":7070", nil)
 }

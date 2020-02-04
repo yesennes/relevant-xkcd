@@ -1,7 +1,7 @@
 package main
 
 import (
-    "time"
+	"time"
 )
 
 var TitleWordWeight int = 400
@@ -12,4 +12,4 @@ var TextWeight int = 1
 
 var URL = "http://www.explainxkcd.com/wiki/index.php?title=List_of_all_comics_(full)&printable=yes"
 
-var crawlInterval = 6 * time.Hour
+var crawlInterval = 6 * time.Minute

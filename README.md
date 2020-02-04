@@ -1,3 +1,6 @@
+## Fork Notice
+This code is forked from [https://github.com/adtac/relevant-xkcd], with the goal of generally tidying up the project.
+
 ## relevant-xkcd
 
 <p align="center">You know how the old saying goes - "There's an XKCD for that!"</p>
@@ -22,6 +25,8 @@ have a detailed explanation, transcript and everything in between for every XKCD
 comic ever. Searching that is probably a good idea to get a relevant XKCD.
 
 ### Installation
+
+At the moment the docker does not work.
 
 The server is dockerized. To get an instance running on port 8080 of your host
 machine, simply do:
