@@ -13,11 +13,12 @@ func main() {
 
 	go func() {
 		for {
+			fmt.Println("Sleeping for ", crawlInterval)
+			time.Sleep(crawlInterval)
 			fmt.Printf("Started crawl\n")
 			crawl()
 			fmt.Printf("Crawl finished\n")
 			loadComics()
-			time.Sleep(crawlInterval)
 		}
 	}()
 	fmt.Printf("Started background crawl\n")
